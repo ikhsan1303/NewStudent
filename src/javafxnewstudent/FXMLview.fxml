@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxnewstudent.FXMLviewController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: blue;">
+         <children>
+            <JFXButton layoutX="-6.0" layoutY="-1.0" onAction="#backdaftar" prefHeight="40.0" prefWidth="207.0" text="Daftar" textFill="WHITE" />
+            <JFXButton layoutX="-6.0" layoutY="39.0" prefHeight="40.0" prefWidth="207.0" text="Pendaftar" textFill="WHITE" />
+            <JFXButton layoutX="-6.0" layoutY="360.0" onAction="#exit" prefHeight="40.0" prefWidth="207.0" text="Keluar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" prefHeight="400.0" prefWidth="780.0" style="-fx-background-color: lightblue;">
+         <children>
+            <TableView fx:id="tabel" layoutX="27.0" layoutY="29.0" prefHeight="320.0" prefWidth="724.0">
+               <columns>
+                  <TableColumn fx:id="nisn" prefWidth="75.0" text="NISN" />
+                  <TableColumn fx:id="nama" prefWidth="204.0" text="Nama" />
+                  <TableColumn fx:id="asal" prefWidth="123.0" text="Asal" />
+                  <TableColumn fx:id="telpon" prefWidth="128.0" text="Telpon" />
+                  <TableColumn fx:id="kelamin" prefWidth="115.0" text="Jenis Kelamin" />
+                  <TableColumn fx:id="jurusan" prefWidth="78.0" text="Jurusan" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="592.0" layoutY="361.0" onAction="#refresh" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: lightgreen;" text="Refresh" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

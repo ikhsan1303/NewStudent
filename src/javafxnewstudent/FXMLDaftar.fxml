@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxnewstudent.FXMLDaftarController">
+   <children>
+      <Pane prefHeight="558.0" prefWidth="200.0" style="-fx-background-color: blue;">
+         <children>
+            <JFXButton layoutX="-5.0" layoutY="1.0" prefHeight="41.0" prefWidth="208.0" text="Daftar" textFill="WHITE" />
+            <JFXButton layoutX="-5.0" layoutY="42.0" onAction="#nextpage" prefHeight="41.0" prefWidth="208.0" text="Pendaftar" textFill="WHITE" />
+            <JFXButton layoutX="-4.0" layoutY="519.0" onAction="#exit" prefHeight="41.0" prefWidth="208.0" text="Keluar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" prefHeight="558.0" prefWidth="467.0" style="-fx-background-color: lightblue;">
+         <children>
+            <JFXTextField fx:id="nama" layoutX="170.0" layoutY="115.0" maxWidth="208.0" minWidth="208.0" prefHeight="31.0" prefWidth="208.0" />
+            <JFXTextField fx:id="nisn" layoutX="170.0" layoutY="179.0" maxWidth="208.0" minWidth="208.0" prefHeight="31.0" prefWidth="208.0" />
+            <JFXTextField fx:id="asal" layoutX="170.0" layoutY="244.0" maxWidth="208.0" minWidth="208.0" prefHeight="31.0" prefWidth="208.0" />
+            <JFXTextField fx:id="telp" layoutX="170.0" layoutY="312.0" maxWidth="208.0" minWidth="208.0" prefHeight="31.0" prefWidth="208.0" />
+            <Label layoutX="91.0" layoutY="122.0" text="Nama" />
+            <Label layoutX="93.0" layoutY="186.0" text="NISN" />
+            <Label layoutX="93.0" layoutY="251.0" text="Asal" />
+            <Label layoutX="84.0" layoutY="319.0" text="Telepon" />
+            <JFXButton layoutX="171.0" layoutY="480.0" onAction="#daftar" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: lightgreen;" text="Daftar" />
+            <JFXRadioButton fx:id="jk1" layoutX="163.0" layoutY="373.0" text="Laki - Laki">
+               <toggleGroup>
+                  <ToggleGroup fx:id="jeniskelamin" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="jk2" layoutX="297.0" layoutY="373.0" text="Perempuan" toggleGroup="$jeniskelamin" />
+            <JFXRadioButton fx:id="jur1" layoutX="163.0" layoutY="422.0" text="RPL">
+               <toggleGroup>
+                  <ToggleGroup fx:id="jurusan" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="jur2" layoutX="297.0" layoutY="422.0" text="TKJ" toggleGroup="$jurusan" />
+            <Label layoutX="71.0" layoutY="373.0" text="Jenis Kelamin" />
+            <Label layoutX="83.0" layoutY="422.0" text="Jurusan" />
+            <Label layoutX="102.0" layoutY="54.0" text="Formulir Pendaftaran">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
